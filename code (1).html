@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnolias Indumentaria - Remeras y Pantalones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+            color: #000;
+        }
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .product img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        .product h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .product p {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+        .price {
+            font-weight: bold;
+            color: #000;
+        }
+        .installments {
+            color: #666;
+        }
+        .colors {
+            margin-top: 10px;
+        }
+        .color-option {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 0 5px;
+            border: 1px solid #ccc;
+        }
+        .add-btn {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .add-btn:hover {
+            background-color: #333;
+        }
+        footer {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Magnolias Indumentaria</h1>
+        <p>Remeras y Pantalones de Calidad</p>
+    </header>
+
+    <section class="products">
+        <!-- Producto 1 -->
+        <div class="product">
+            <button class="add-btn" onclick="addToCart('Remera Básica')">+</button>
+            <img src="https://via.placeholder.com/300x200?text=Remera+Basica" alt="Remera Básica">
+            <h3>Remera Básica en Algodón</h3>
+            <p>Remera cómoda y versátil para el día a día.</p>
+            <p class="price">Valor mínimo $ 25.000</p>
+            <p class="installments">Hasta 6 cuotas de $ 4.167 sin interés.</p>
+            <p>Precio sin impuestos nacionales: $ 20.661</p>
+            <p>Precio sin impuestos: $ 20.661</p>
+            <div class="colors">
+                <span class="color-option" style="background-color: #fff;"></span>
+                <span class="color-option" style="background-color: #000;"></span>
+                <span class="color-option" style="background-color: #f00;"></span>
+                <span class="color-option" style="background-color: #00f;"></span>
+            </div>
+            <p>4 Colores</p>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product">
+            <button class="add-btn" onclick="addToCart('Remera Estampada')">+</button>
+            <img src="https://via.placeholder.com/300x200?text=Remera+Estampada" alt="Remera Estampada">
+            <h3>Remera Estampada en Algodón</h3>
+            <p>Remera con diseño único para destacar.</p>
+            <p class="price">Valor mínimo $ 30.000</p>
+            <p class="installments">Hasta 6 cuotas de $ 5.000 sin interés.</p>
+            <p>Precio sin impuestos nacionales: $ 24.793</p>
+            <p>Precio sin impuestos: $ 24.793</p>
+            <div class="colors">
+                <span class="color-option" style="background-color: #fff;"></span>
+                <span class="color-option" style="background-color: #000;"></span>
+                <span class="color-option" style="background-color: #0f0;"></span>
+            </div>
+            <p>3 Colores</p>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product">
+            <button class="add-btn" onclick="addToCart('Pantalón Jeans')">+</button>
+            <img src="https://via.placeholder.com/300x200?text=Pantalon+Jeans" alt="Pantalón Jeans">
+            <h3>Pantalón Jeans Clásico</h3>
+            <p>Pantalón resistente y moderno para cualquier ocasión.</p>
+            <p class="price">Valor mínimo $ 45.000</p>
+            <p class="installments">Hasta 6 cuotas de $ 7.500 sin interés.</p>
+            <p>Precio sin impuestos nacionales: $ 37.190</p>
+            <p>Precio sin impuestos: $ 37.190</p>
+            <div class="colors">
+                <span class="color-option" style="background-color: #006;"></span>
+                <span class="color-option" style="background-color: #000;"></span>
+                <span class="color-option" style="background-color: #fff;"></span>
+                <span class="color-option" style="background-color: #888;"></span>
+                <span class="color-option" style="background-color: #f00;"></span>
+            </div>
+            <p>5 Colores</p>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product">
+            <button class="add-btn" onclick="addToCart('Pantalón Deportivo')">+</button>
+            <img src="https://via.placeholder.com/300x200?text=Pantalon+Deportivo" alt="Pantalón Deportivo">
+            <h3>Pantalón Deportivo en Poliéster</h3>
+            <p>Pantalón cómodo para actividades físicas.</p>
+            <p class="price">Valor mínimo $ 35.000</p>
+            <p class="installments">Hasta 6 cuotas de $ 5.833 sin interés.</p>
+            <p>Precio sin impuestos nacionales: $ 28.926</p>
+            <p>Precio sin impuestos: $ 28.926</p>
+            <div class="colors">
+                <span class="color-option" style="background-color: #000;"></span>
+                <span class="color-option" style="background-color: #fff;"></span>
+            </div>
+            <p>2 Colores</p>
+        </div>
+
+        <!-- Agrega más productos aquí copiando la estructura -->
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Magnolias Indumentaria. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        function addToCart(productName) {
+            alert(`Producto "${productName}" agregado al carrito. (Funcionalidad básica - expande para un carrito real)`);
+        }
+    </script>
+</body>
+</html>
